@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ff: 'Roboto', sans-serif;
+  --black: #323238;
+  --bg-bt-hv: #02799D;
+  --bg-bt: #E1E1E6;
+
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+main {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(5rem, 10rem + 5vw, 20rem);
+  flex-wrap: wrap;
+}
+
+.left {
+  display: grid;
+}
+
+.timer {
+  justify-self: center;
+  margin-bottom: 1rem;
+}
+
+.timer span {
+  font-family: var(--ff);
+  font-size: 12.6rem;
+  line-height: 14.8rem;
+}
+
+.controls {
+  display: flex;
+  gap: 4rem;
+  justify-self: center;
+}
+
+.hide {
+  display: none;
+}
+
+.left button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  transition: all 400ms;
+}
+
+.left button:hover {
+  transform: scale(1.1);
+}
+
+.left svg:hover path {
+  fill: var(--bg-bt-hv);
+}
+
+.right {
+  width: 31rem;
+  display: grid;
+  grid-template-areas: 'A B'
+  'C D';
+  gap: 3.2rem;
+}
+
+.right button {
+  background-color: var(--bg-bt);
+  width: 13.8rem;
+  height: 15.2rem;
+
+  border: 0 none;
+  border-radius: 2.4rem;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+.right button:hover {
+  background-color: var(--bg-bt-hv);
+  transform: scale(1.06);
+}
+
+.right svg:hover path:nth-child(2) {
+  fill: white;
+}
+
+button.press{
+  background-color: var(--bg-bt-hv);
+  
+}
+
+ .add {
+   fill: white;
+ }
+
+@media(max-width: 776px) {
+  main {
+    gap: 2rem;
+  }
+}
+
