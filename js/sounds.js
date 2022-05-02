@@ -1,3 +1,5 @@
+import Controls from './controls.js'
+const controls = Controls()
 export default function () {
   const buttonPressAudio = new Audio(
     'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true'
@@ -7,18 +9,20 @@ export default function () {
     'https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true'
   )
 
-  const forestSound = new Audio('../sounds/forest.wav')
+  const forestSound = new Audio(
+    'https://github.com/exodogurgel/FocusTimer/blob/main/sounds/forest.wav?raw=true'
+  )
 
   const rainSound = new Audio(
-    'https://drive.google.com/file/d/1Ip8xBqAUJ-bty51Wz8JBtX_bWXCgA0P2/view'
+    'https://github.com/exodogurgel/FocusTimer/blob/main/sounds/rain.wav?raw=true'
   )
 
   const coffeeShopSound = new Audio(
-    'https://drive.google.com/file/d/1OxLKpCwg2wrxXFNUHgZxJ51QEt0ac5RA/view'
+    'https://github.com/exodogurgel/FocusTimer/blob/main/sounds/coffee-shop.wav?raw=true'
   )
 
   const fireplaceSound = new Audio(
-    'https://drive.google.com/file/d/1MakaBPxJvTa_whaSM3kEbRcxiVd1GRCB/view'
+    'https://github.com/exodogurgel/FocusTimer/blob/main/sounds/fireplace.wav?raw=true'
   )
 
   forestSound.loop = true
@@ -26,12 +30,81 @@ export default function () {
   coffeeShopSound.loop = true
   fireplaceSound.loop = true
 
+  let isPlaying = 0
+
+  function soundPause() {
+    forestSound.pause()
+    rainSound.pause()
+    coffeeShopSound.pause()
+    fireplaceSound.pause()
+  }
+
+  function playForest() {
+    if (isPlaying == 0) {
+      isPlaying = 1
+      forestSound.play()
+      controls.colorButtonPressForest()
+      controls.ButtonPressForest()
+    } else {
+      isPlaying = 0
+      controls.removeButtonPress()
+      controls.removeColorButtonPress()
+      soundPause()
+    }
+  }
+
+  function playRain() {
+    if (isPlaying == 0) {
+      isPlaying = 1
+      rainSound.play()
+      controls.colorButtonPressRain()
+      controls.ButtonPressRain()
+    } else {
+      isPlaying = 0
+      controls.removeButtonPress()
+      controls.removeColorButtonPress()
+      soundPause()
+    }
+  }
+
+  function playCoffeShop() {
+    if (isPlaying == 0) {
+      isPlaying = 1
+      coffeeShopSound.play()
+      controls.colorButtonPressCoffeeShop()
+      controls.ButtonPressCoffeeShop()
+    } else {
+      isPlaying = 0
+      controls.removeButtonPress()
+      controls.removeColorButtonPress()
+      soundPause()
+    }
+  }
+
+  function playFireplace() {
+    if (isPlaying == 0) {
+      isPlaying = 1
+      fireplaceSound.play()
+      controls.colorButtonPressFireplace()
+      controls.ButtonPressFireplace()
+    } else {
+      isPlaying = 0
+      controls.removeButtonPress()
+      controls.removeColorButtonPress()
+      soundPause()
+    }
+  }
+
   return {
     buttonPressAudio,
     kitchenTimer,
     forestSound,
     rainSound,
     coffeeShopSound,
-    fireplaceSound
+    fireplaceSound,
+    playForest,
+    playRain,
+    playCoffeShop,
+    playFireplace
   }
 }

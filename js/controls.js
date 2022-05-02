@@ -1,17 +1,70 @@
-export default function Controls({ buttonPause, buttonPlay }) {
-  function removeButtonPress(active, noActive1, noActive2, noActive3) {
-    active.classList.toggle('press')
-    noActive1.classList.remove('press')
-    noActive2.classList.remove('press')
-    noActive3.classList.remove('press')
+import {
+  buttonPlay,
+  buttonPause,
+  buttonForest,
+  buttonRain,
+  buttonCoffeeShop,
+  buttonFireplace
+} from './elements.js'
+
+const soundsBg = ['forest', 'rain', 'coffee-shop', 'fireplace']
+
+export default function Controls() {
+  function removeButtonPress() {
+    buttonForest.classList.remove('press')
+    buttonRain.classList.remove('press')
+    buttonCoffeeShop.classList.remove('press')
+    buttonFireplace.classList.remove('press')
   }
 
-  function removeColorButtonPress(change, remove1, remove2, remove3) {
-    document.querySelector(`.${change} .change`).classList.toggle('add')
-    document.querySelector(`.${remove1} .change`).classList.remove('add')
-    document.querySelector(`.${remove2} .change`).classList.remove('add')
-    document.querySelector(`.${remove3} .change`).classList.remove('add')
+  function removeColorButtonPress() {
+    document.querySelector(`.${soundsBg[0]} .change`).classList.remove('add')
+    document.querySelector(`.${soundsBg[1]} .change`).classList.remove('add')
+    document.querySelector(`.${soundsBg[2]} .change`).classList.remove('add')
+    document.querySelector(`.${soundsBg[3]} .change`).classList.remove('add')
   }
+
+  /*---------------------- Forest ------------------------*/
+
+  function ButtonPressForest() {
+    buttonForest.classList.add('press')
+  }
+
+  function colorButtonPressForest() {
+    document.querySelector(`.forest .change`).classList.add('add')
+  }
+
+  /*---------------------- Rain ------------------------*/
+
+  function ButtonPressRain() {
+    buttonRain.classList.add('press')
+  }
+
+  function colorButtonPressRain() {
+    document.querySelector(`.rain .change`).classList.add('add')
+  }
+
+  /*---------------------- Coffee-shop ------------------------*/
+
+  function ButtonPressCoffeeShop() {
+    buttonCoffeeShop.classList.add('press')
+  }
+
+  function colorButtonPressCoffeeShop() {
+    document.querySelector(`.coffee-shop .change`).classList.add('add')
+  }
+
+  /*---------------------- Fireplace ------------------------*/
+
+  function ButtonPressFireplace() {
+    buttonFireplace.classList.add('press')
+  }
+
+  function colorButtonPressFireplace() {
+    document.querySelector(`.fireplace .change`).classList.add('add')
+  }
+
+  /*-----------------------------------------------------------*/
 
   function play() {
     buttonPlay.classList.add('hide')
@@ -27,6 +80,14 @@ export default function Controls({ buttonPause, buttonPlay }) {
     removeButtonPress,
     removeColorButtonPress,
     play,
-    reset
+    reset,
+    ButtonPressForest,
+    colorButtonPressForest,
+    ButtonPressRain,
+    colorButtonPressRain,
+    ButtonPressCoffeeShop,
+    colorButtonPressCoffeeShop,
+    ButtonPressFireplace,
+    colorButtonPressFireplace
   }
 }

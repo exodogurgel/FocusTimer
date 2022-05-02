@@ -72,7 +72,7 @@ main {
   width: 31rem;
   display: grid;
   grid-template-areas: 'A B'
-  'C D';
+    'C D';
   gap: 3.2rem;
 }
 
@@ -96,18 +96,17 @@ main {
   fill: white;
 }
 
-button.press{
+button.press {
   background-color: var(--bg-bt-hv);
-  
+
 }
 
- .add {
-   fill: white;
- }
+.add {
+  fill: white;
+}
 
 @media(max-width: 776px) {
   main {
     gap: 2rem;
   }
 }
-
