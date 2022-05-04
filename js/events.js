@@ -1,3 +1,4 @@
+import sounds from './sounds.js'
 import {
   buttonPlay,
   buttonPause,
@@ -7,10 +8,16 @@ import {
   buttonForest,
   buttonRain,
   buttonCoffeeShop,
-  buttonFireplace
+  buttonFireplace,
+  buttonlight,
+  buttonDark,
+  volForest,
+  volRain,
+  volCoffeeShop,
+  volFireplace
 } from './elements.js'
 
-export default function ({ controls, timer, sounds }) {
+export default function ({ controls, timer, sounds, darkMode }) {
   /* Eventos de clicks */
 
   buttonPlay.addEventListener('click', () => {
@@ -57,5 +64,32 @@ export default function ({ controls, timer, sounds }) {
 
   buttonFireplace.addEventListener('click', () => {
     sounds.playFireplace()
+  })
+
+  /* Events Dark Mode */
+
+  buttonlight.addEventListener('click', () => {
+    darkMode.darkLight()
+  })
+
+  buttonDark.addEventListener('click', () => {
+    darkMode.darkLight()
+  })
+
+  /* Events Volume */
+  volForest.addEventListener('input', () => {
+    sounds.forestSound.volume = volForest.value
+  })
+
+  volRain.addEventListener('input', () => {
+    sounds.rainSound.volume = volRain.value
+  })
+
+  volCoffeeShop.addEventListener('input', () => {
+    sounds.coffeeShopSound.volume = volCoffeeShop.value
+  })
+
+  volFireplace.addEventListener('input', () => {
+    sounds.fireplaceSound.volume = volFireplace.value
   })
 }

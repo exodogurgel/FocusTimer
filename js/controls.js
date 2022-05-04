@@ -4,7 +4,11 @@ import {
   buttonForest,
   buttonRain,
   buttonCoffeeShop,
-  buttonFireplace
+  buttonFireplace,
+  cardOne,
+  cardTwo,
+  cardThree,
+  cardFour
 } from './elements.js'
 
 const soundsBg = ['forest', 'rain', 'coffee-shop', 'fireplace']
@@ -15,6 +19,10 @@ export default function Controls() {
     buttonRain.classList.remove('press')
     buttonCoffeeShop.classList.remove('press')
     buttonFireplace.classList.remove('press')
+    cardOne.classList.remove('press')
+    cardTwo.classList.remove('press')
+    cardThree.classList.remove('press')
+    cardFour.classList.remove('press')
   }
 
   function removeColorButtonPress() {
@@ -28,6 +36,7 @@ export default function Controls() {
 
   function ButtonPressForest() {
     buttonForest.classList.add('press')
+    cardOne.classList.add('press')
   }
 
   function colorButtonPressForest() {
@@ -38,6 +47,7 @@ export default function Controls() {
 
   function ButtonPressRain() {
     buttonRain.classList.add('press')
+    cardTwo.classList.add('press')
   }
 
   function colorButtonPressRain() {
@@ -48,6 +58,7 @@ export default function Controls() {
 
   function ButtonPressCoffeeShop() {
     buttonCoffeeShop.classList.add('press')
+    cardThree.classList.add('press')
   }
 
   function colorButtonPressCoffeeShop() {
@@ -58,6 +69,7 @@ export default function Controls() {
 
   function ButtonPressFireplace() {
     buttonFireplace.classList.add('press')
+    cardFour.classList.add('press')
   }
 
   function colorButtonPressFireplace() {

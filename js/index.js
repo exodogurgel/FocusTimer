@@ -2,6 +2,7 @@ import Controls from './controls.js'
 import Timer from './timer.js'
 import Sounds from './sounds.js'
 import Events from './events.js'
+import DarkMode from './darkMode.js'
 import {
   buttonPlay,
   buttonPause,
@@ -22,4 +23,6 @@ const timer = Timer({
 
 const sounds = Sounds()
 
-Events({ controls, timer, sounds })
+const darkMode = DarkMode()
+
+Events({ controls, timer, sounds, darkMode })

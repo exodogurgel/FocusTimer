@@ -11,6 +11,21 @@ const buttonFireplace = document.querySelector('.fireplace')
 const minutesDisplay = document.querySelector('.minutes')
 const secondsDisplay = document.querySelector('.seconds')
 
+const buttonlight = document.querySelector('.sun')
+const buttonDark = document.querySelector('.moon')
+const leftButtons = document.querySelector('.left')
+const rightButtons = document.querySelector('.right')
+
+const cardOne = document.querySelector('.one')
+const cardTwo = document.querySelector('.two')
+const cardThree = document.querySelector('.three')
+const cardFour = document.querySelector('.four')
+
+const volForest = document.querySelector('#forest')
+const volRain = document.querySelector('#rain')
+const volCoffeeShop = document.querySelector('#coffeeShop')
+const volFireplace = document.querySelector('#fireplace')
+
 export {
   buttonPlay,
   buttonPause,
@@ -22,5 +37,17 @@ export {
   buttonCoffeeShop,
   buttonFireplace,
   minutesDisplay,
-  secondsDisplay
+  secondsDisplay,
+  buttonlight,
+  buttonDark,
+  leftButtons,
+  rightButtons,
+  cardOne,
+  cardTwo,
+  cardThree,
+  cardFour,
+  volForest,
+  volRain,
+  volCoffeeShop,
+  volFireplace
 }

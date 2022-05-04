@@ -26,9 +26,17 @@ export default function () {
   )
 
   forestSound.loop = true
+  forestSound.volume = 0.5
   rainSound.loop = true
+  rainSound.volume = 0.5
   coffeeShopSound.loop = true
+  coffeeShopSound.volume = 0.5
   fireplaceSound.loop = true
+  fireplaceSound.volume = 0.5
+
+  function volSound(sound, vol) {
+    sound.volume = vol
+  }
 
   let isPlaying = 0
 
@@ -105,6 +113,7 @@ export default function () {
     playForest,
     playRain,
     playCoffeShop,
-    playFireplace
+    playFireplace,
+    volSound
   }
 }
