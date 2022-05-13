@@ -36,7 +36,7 @@
 
 ## 💻 About
 
-Focus timer is a pomodoro-style application.
+Focus timer is a pomodoro-style application created in factory pattern using ECMAScript modules.
 
 With which you can stay more focused, in addition to being able to listen to relaxing sounds to facilitate conception
 
@@ -67,7 +67,7 @@ With which you can stay more focused, in addition to being able to listen to rel
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="DoctorCare" title="#DoctorCare" src="./prints/gifDoctorCore.gif" width="90%">
+  <img alt="DoctorCare" title="#DoctorCare" src="./assets/FocusTimer.gif" width="100%">
 
 
 </p>
@@ -75,8 +75,8 @@ With which you can stay more focused, in addition to being able to listen to rel
 
 ### Mobile
 
-<p align="center">
- responsive app
+<p align="left">
+ Responsive app
 
 </p>
 
@@ -86,11 +86,15 @@ With which you can stay more focused, in addition to being able to listen to rel
 
 The following tools were used in the construction of the project:
 
-#### **Website** 
+
+Project created in factory pattern using ECMAScript modules
+
+#### **Project** 
 
 -   HTML
 -   CSS
 -   Javascript
+-   Ecmascript modules
 
 
 ---
